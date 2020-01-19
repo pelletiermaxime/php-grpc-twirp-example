@@ -1,0 +1,16 @@
+{
+    "require": {
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "php-http/guzzle6-adapter": "^2.0",
+        "php-http/discovery": "^1.7",
+        "google/protobuf": "^3.11",
+        "twirp/twirp": "^0.5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demo\\": "Demo",
+            "": "../generated"
+        }
+    }
+}

@@ -19,7 +19,7 @@ $client = new HaberdasherClient($argv[1]);
 
         printf("I received a %s %s\n", $hat->getColor(), $hat->getName());
     } catch (\Twirp\Error $e) {
-        if ($cause = $e->getMeta('cause') !== null) {
+        if (($cause = $e->getMeta('cause')) !== null) {
             printf("%s: %s (%s)\n", strtoupper($e->getErrorCode()), $e->getMessage(), $cause);
         } else {
             printf("%s: %s\n", strtoupper($e->getErrorCode()), $e->getMessage());
